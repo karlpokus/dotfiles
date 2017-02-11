@@ -3,9 +3,13 @@
 # This script creates symlinks from the home directory to any desired dotfiles in $dir
 # places old files in $olddir as backup
 
+# Todos
+# [ ] fix repeated use. Don't move previously added symlinks to ~ too
+# [ ] get files from /src with $(ls)
+
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=".vimrc"
+files=".vimrc .gitconfig"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
