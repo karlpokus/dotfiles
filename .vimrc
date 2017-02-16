@@ -18,3 +18,13 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
+
+" custom keybindings
+
+" CTRL-C to copy (visual mode)
+" vmap <D-c> y
+" CTRL-X to cut (visual mode
+" vmap <D-x> x
+" CTRL-V to paste (insert mode)
+" imap <D-v> P
+" imap <C-v> <esc>P
