@@ -14,7 +14,7 @@ files=".vimrc .gitconfig .tmux.conf"
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -pv $olddir
-echo "...done"
+echo "done"
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
