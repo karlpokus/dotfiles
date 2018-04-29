@@ -1,0 +1,7 @@
+*   unstaged
++   staged
+%   untracked files
+<   you are behind
+>   you are ahead
+<>  you have diverged
+=   no diff
