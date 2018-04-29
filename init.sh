@@ -7,24 +7,22 @@
 # [ ] fix repeated use. Don't move previously added symlinks to ~ too
 # [ ] get files from /src with $(ls)
 
+# Requirements
+# - this repo in ~/dotfiles
+# - can be run from anywhere
+
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=".vimrc .gitconfig .tmux.conf"
+files=".bash_profile .vimrc .gitconfig .tmux.conf"
 
-# create dotfiles_old in homedir
+# create dotfiles_old in homedir - idempotent
 echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -pv $olddir
-echo "done"
-
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
-cd $dir
-echo "done"
+mkdir -pv $olddir && echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-  echo "Moving any existing dotfiles from ~ to $olddir"
-  mv -v ~/$file ~/dotfiles_old/
+  echo "Moving any existing dotfile in ~ to $olddir"
+  mv -v ~/$file $olddir
   echo "Creating symlink to $file in ~"
-  ln -sv $dir/$file ~/$file
+  ln -sv $dir/src/$file ~/$file
 done
