@@ -63,7 +63,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home`
+#export JAVA_HOME=`/usr/libexec/java_home`
 
 # go-lang
 export GOPATH=$HOME/golang
@@ -73,5 +73,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # autocompletes
-source /usr/local/etc/bash_completion.d/ssh
-source /usr/local/etc/bash_completion.d/npm
+source ~/dotfiles/deps/bash_completion.d/ssh  #/usr/local/etc/bash_completion.d/ssh
+
