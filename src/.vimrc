@@ -2,7 +2,7 @@ set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme slate         " set colorscheme
+colorscheme onedark       " set colorscheme; these are nice: slate 
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
 filetype indent on        " activates indenting for files
@@ -21,10 +21,10 @@ set nowrap                " don't wrap text
 set path=$PWD/**          " set path to current dir from where you launched vim
 
 " highlight for .txt
-highlight TxtComment    ctermfg=19
-highlight TxtDone       ctermfg=19
-highlight TxtPending    ctermfg=green
-highlight TxtHeader     ctermfg=green
+"highlight TxtComment    ctermfg=19
+"highlight TxtDone       ctermfg=19
+"highlight TxtPending    ctermfg=green
+"highlight TxtHeader     ctermfg=green
 
 " file browser
 let g:netrw_banner = 0	  " remove banner
@@ -33,17 +33,19 @@ set wildmenu              " enabled menu at bottom
 
 " KEY MAPPINGS
 let mapleader=","
-" tabs
-nnoremap <leader><Tab> :tabn<CR>
-nnoremap <leader><S-Tab> :tabp<CR>
-nnoremap <leader>x :tabclose<CR>
 " open file browser
-nnoremap <leader>d :Sex<CR>
-" copy to system clipboard
+nnoremap <leader>d :Vex<CR>
+" tabs
+nnoremap <leader>l :tabn<CR>
+nnoremap <leader>h :tabp<CR>
+nnoremap <leader>x :tabclose<CR>
+"highlight TabLineFill ctermfg=white ctermbg=green
+"highlight TabLine ctermfg=19 ctermbg=blue
+"highlight TabLineSel ctermfg=white
+" copy to system clipboard on OSX
 vnoremap <silent> <leader>c :!tee >(pbcopy)<CR>
-" edit vimrc
+" edit/source vimrc
 nnoremap <leader>ev :vs $MYVIMRC<cr>
-" source vimrc
 nnoremap <leader>sv :so $MYVIMRC<cr>
 " use space to page down
 nnoremap <space> <c-d>
