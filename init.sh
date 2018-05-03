@@ -5,31 +5,23 @@
 # places old files in $olddir as backup
 
 # Todos
-# fix repeated use. Don't move previously added symlinks to ~ too
 # make idempotent
 
 # Requirements
-# - this repo in ~/dotfiles
-# - can be run from anywhere
+# this repo in ~/dotfiles
+# can be run from anywhere
 
 dir=~/dotfiles
-olddir=~/dotfiles_old
-files=".bash_profile .vimrc .gitconfig .tmux.conf"
+backup=~/dotfiles_old
+targets=".bash_profile .vimrc .gitconfig .tmux.conf .vim"
 
 # create backup dir
-echo "creating $olddir"
-mkdir -pv $olddir && echo done
+mkdir -pv $backup && echo "backup dir created"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-echo "moving dotfiles to $olddir and symlinking"
-for file in $files; do
-  mv -iv ~/$file $olddir
-  ln -sv $dir/src/$file ~/$file
+# move any existing targets in ~ to backup and create symlinks
+echo "moving existing targets to backup dir and symlinking"
+for target in $targets; do
+  mv -iv ~/$target $backup
+  ln -sv $dir/src/$target ~/$target
 done
-echo done
-
-# move ~/.vim to backup
-echo "moving ~/.vim to $olddir and symlinking"
-mv -iv ~/.vim $olddir 
-ln -sv $dir/vim/.vim ~/.vim 
 echo done
