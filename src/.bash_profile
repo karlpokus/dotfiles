@@ -45,7 +45,7 @@ alias tldr='bash ~/dev/tldr/tldr.sh'
 alias json2table='~/dev/json2table/index.js'
 
 # ssn
-alias ssn='~/dev/pernr/index.js | pbcopy; echo -e "$(pbpaste) copied to clipboard"'
+alias ssn='~/dev/pernr/lib/rand.js | pbcopy; echo -e "$(pbpaste) copied to clipboard"'
 
 # list hosts
 alias hosts='less ~/.ssh/config'
