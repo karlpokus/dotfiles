@@ -55,7 +55,7 @@ alias nodes='lsof -n -i tcp | grep node'
 
 # ips
 alias ip-wan='curl -s https://ip.mrfriday.com/'
-alias ip-lan='ipconfig getifaddr en0'
+alias ip-lan='hostname -I 2>/dev/null || ipconfig getifaddr en0'
 alias myip='echo -e public"\t"$(ip-wan)"\n"private"\t"$(ip-lan)'
 
 # vim
