@@ -2,7 +2,7 @@ set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme onedark       " set colorscheme; these are nice: slate 
+colorscheme pablo2        " set colorscheme; slate, onedark 
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
 filetype indent on        " activates indenting for files
@@ -19,9 +19,10 @@ set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 set path=$PWD/**          " set path to current dir from where you launched vim
+set rtp+=/usr/local/opt/fzf " add fzf to runtimepath
 
 " highlight for .txt
-"highlight TxtComment    ctermfg=19
+highlight TxtComment    ctermfg=19
 "highlight TxtDone       ctermfg=19
 "highlight TxtPending    ctermfg=green
 "highlight TxtHeader     ctermfg=green
@@ -35,6 +36,8 @@ set wildmenu              " enabled menu at bottom
 let mapleader=","
 " open file browser
 nnoremap <leader>d :Vex<CR>
+" run fzf on nv
+nnoremap <leader>D :FZF ~/Dropbox/nv<cr>
 " tabs
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>h :tabp<CR>
@@ -50,3 +53,6 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 " use space to page down
 nnoremap <space> <c-d>
 
+" TESTS
+
+"command! -nargs=* Note :!ls | grep <args>
