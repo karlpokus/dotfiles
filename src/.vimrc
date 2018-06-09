@@ -21,6 +21,9 @@ set nowrap                " don't wrap text
 set path=$PWD/**          " set path to current dir from where you launched vim
 set rtp+=/usr/local/opt/fzf " add fzf to runtimepath
 
+" remove pipes in divider
+set fillchars+=vert:\ 
+
 " highlight for .txt
 highlight TxtComment    ctermfg=19
 "highlight TxtDone       ctermfg=19
@@ -34,17 +37,24 @@ set wildmenu              " enabled menu at bottom
 
 " KEY MAPPINGS
 let mapleader=","
-" open file browser
-nnoremap <leader>d :Vex<CR>
-" run fzf on nv
-nnoremap <leader>D :FZF ~/Dropbox/nv<cr>
-" tabs
+
+" file browsers
+nnoremap <leader>d :Vex<cr>
+nnoremap <leader>D :FZF<cr>
+
+" run fzf on nv i.e my nv in vim
+nnoremap <leader>n :FZF ~/Dropbox/nv<cr>
+
+" tabs navigation
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>h :tabp<CR>
 nnoremap <leader>x :tabclose<CR>
-"highlight TabLineFill ctermfg=white ctermbg=green
-"highlight TabLine ctermfg=19 ctermbg=blue
-"highlight TabLineSel ctermfg=white
+
+" tabs UI
+highlight TabLineFill ctermfg=none ctermbg=none
+highlight TabLine ctermfg=4 ctermbg=none
+highlight TabLineSel ctermfg=white
+
 " copy to system clipboard on OSX
 vnoremap <silent> <leader>c :!tee >(pbcopy)<CR>
 " edit/source vimrc
@@ -53,6 +63,5 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 " use space to page down
 nnoremap <space> <c-d>
 
-" TESTS
+"set statusline+=%f
 
-"command! -nargs=* Note :!ls | grep <args>
