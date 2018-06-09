@@ -15,8 +15,8 @@ dir=~/dotfiles
 backup=~/dotfiles_old
 targets=".bash_profile .vimrc .gitconfig .tmux.conf .vim"
 
-# create backup dir
-mkdir -pv $backup && echo "backup dir created"
+# create backup dir if neccessary
+mkdir -pv $backup && echo "backup dir created" || echo "backup dir exists"
 
 # move any existing targets in ~ to backup and create symlinks
 echo "moving existing targets to backup dir and symlinking"
