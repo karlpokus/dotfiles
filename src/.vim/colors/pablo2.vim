@@ -6,6 +6,7 @@
 
 " color chart
 " 3     yellow dark
+" 4     blue dark
 " 11    yellow bright
 " 12    medium blue
 
@@ -36,3 +37,5 @@ highlight StatusLine ctermfg=4 ctermbg=none cterm=none
 
 highlight Normal									  guifg=#ffffff guibg=#000000
 highlight Search				ctermbg=3							guibg=#c0c000
+
+highlight VertSplit ctermfg=4
