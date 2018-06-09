@@ -20,10 +20,9 @@ echo "running init.."
 # create backup dir if neccessary
 mkdir -pv $backup 
 
-# move any existing targets in ~ to backup and create symlinks
-echo "moving any existing files to backup dir before symlinking"
+# move any non-links to backup and create symlinks
 for target in $targets; do
-    if [ -f ~/$target ]; then
+    if [ ! -h ~/$target ]; then
         mv -iv ~/$target $backup
         ln -sv $dir/src/$target ~/$target
     fi
