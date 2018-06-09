@@ -15,13 +15,17 @@ dir=~/dotfiles
 backup=~/dotfiles_old
 targets=".bash_profile .vimrc .gitconfig .tmux.conf .vim"
 
+echo "running init.."
+
 # create backup dir if neccessary
-mkdir -pv $backup && echo "backup dir created" || echo "backup dir exists"
+mkdir -pv $backup 
 
 # move any existing targets in ~ to backup and create symlinks
-echo "moving existing targets to backup dir and symlinking"
+echo "moving any existing files to backup dir before symlinking"
 for target in $targets; do
-  mv -iv ~/$target $backup
-  ln -sv $dir/src/$target ~/$target
+    if [ -f ~/$target ]; then
+        mv -iv ~/$target $backup
+        ln -sv $dir/src/$target ~/$target
+    fi
 done
 echo done
