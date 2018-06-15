@@ -1,4 +1,4 @@
 # coloured output
-alias ls='ls --lor'
+alias ls='ls --color'
 # ip
-ip-lan='hostname -I'
+alias ip-lan='hostname -I'
