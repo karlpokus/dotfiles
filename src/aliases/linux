@@ -1,0 +1,4 @@
+# coloured output
+alias ls='ls --lor'
+# ip
+ip-lan='hostname -I'

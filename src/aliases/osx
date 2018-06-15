@@ -1,0 +1,16 @@
+# colored output -p adds / to dirs -F adds /@| to stuff
+alias ls='ls -G'
+# chrome headless
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+# flow [app] [env] [flags]
+alias flow='node ~/doctrin/flaunch/index.js'
+# tldr <cmd>
+alias tldr='bash ~/dev/tldr/tldr.sh'
+# json2table
+alias json2table='~/dev/json2table/index.js'
+# ssn
+alias ssn='~/dev/pernr/lib/rand.js | pbcopy; echo -e "$(pbpaste) copied to clipboard"'
+# list hosts
+alias hosts='less ~/.ssh/config'
+# ip
+alias ip-lan='ipconfig getifaddr en0'
