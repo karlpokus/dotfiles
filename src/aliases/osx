@@ -14,3 +14,5 @@ alias ssn='~/dev/pernr/lib/rand.js | pbcopy; echo -e "$(pbpaste) copied to clipb
 alias hosts='less ~/.ssh/config'
 # ip
 alias ip-lan='ipconfig getifaddr en0'
+# gopkg
+alias gopkg='~/golang/src/github.com/karlpokus/gopkg/gopkg'
