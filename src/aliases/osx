@@ -16,3 +16,5 @@ alias hosts='less ~/.ssh/config'
 alias ip-lan='ipconfig getifaddr en0'
 # gopkg
 alias gopkg='~/golang/src/github.com/karlpokus/gopkg/gopkg'
+# http server status
+alias status='~/dev/http-status-code/request.sh'
