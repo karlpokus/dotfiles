@@ -14,3 +14,6 @@ alias ssn='~/dev/pernr/lib/rand.js | pbcopy; echo -e "$(pbpaste) copied to clipb
 alias hosts='less ~/.ssh/config'
 # ip
 alias ip-lan='ipconfig getifaddr en0'
+# open go playground in browser
+alias gopl='open https://play.golang.org'
+
