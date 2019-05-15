@@ -12,19 +12,19 @@
 # can be run from anywhere
 
 dir=~/dotfiles
-backup=~/dotfiles_old
+backup=/tmp/dotfiles_old
 targets=".bash_profile .vimrc .gitconfig .tmux.conf .vim"
 
 echo "running init.."
 
 # create backup dir if neccessary
-mkdir -pv $backup 
+mkdir -pv $backup
 
 # move any non-links to backup and create symlinks
 for target in $targets; do
-    if [ ! -h ~/$target ]; then
-        mv -iv ~/$target $backup
-        ln -sv $dir/src/$target ~/$target
-    fi
+  if [ ! -h ~/$target ]; then
+    mv -iv ~/$target $backup
+    ln -sv $dir/src/$target ~/$target
+  fi
 done
 echo done
