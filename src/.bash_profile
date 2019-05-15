@@ -15,7 +15,9 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto" # verbose, name
 # lastExitStatus: currentJobs time user@host pwd [git stuff] $
-export PROMPT_COMMAND='__git_ps1 "\e[36m$(echo $?):\j \t\e[m \u@\h \W" " \\\$ "'
+#export PROMPT_COMMAND='__git_ps1 "\e[36m$(echo $?):\j \t\e[m \u@\h \W" " \\\$ "'
+# split on two lines
+export PROMPT_COMMAND='__git_ps1 "┌─ \e[36m$(echo $?):\j \t\e[m \u@\h \w\n└─" " \\\$ "'
 
 # fns
 function title() {

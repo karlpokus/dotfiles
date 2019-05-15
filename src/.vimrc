@@ -26,9 +26,9 @@ set fillchars+=vert:\
 
 " highlight for .txt
 highlight TxtComment    ctermfg=19
-"highlight TxtDone       ctermfg=19
+highlight TxtDone       ctermfg=19
 "highlight TxtPending    ctermfg=green
-"highlight TxtHeader     ctermfg=green
+highlight TxtHeader     ctermfg=19
 
 " file browser
 let g:netrw_banner = 0	  " remove banner

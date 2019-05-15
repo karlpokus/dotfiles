@@ -2,18 +2,20 @@
 alias ls='ls -G'
 # chrome headless
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-# flow [app] [env] [flags]
-alias flow='node ~/doctrin/flaunch/index.js'
 # tldr <cmd>
 alias tldr='bash ~/dev/tldr/tldr.sh'
-# json2table
-alias json2table='~/dev/json2table/index.js'
 # ssn
 alias ssn='~/dev/pernr/lib/rand.js | pbcopy; echo -e "$(pbpaste) copied to clipboard"'
 # list hosts
 alias hosts='less ~/.ssh/config'
 # ip
 alias ip-lan='ipconfig getifaddr en0'
-# open go playground in browser
-alias gopl='open https://play.golang.org'
-
+# gopkg
+alias gopkg='~/golang/src/github.com/karlpokus/gopkg/gopkg'
+# http server status
+alias status='~/dev/http-status-code/request.sh'
+# url-stash
+alias urst='~/dev/url-stash/urst.sh ~/Dropbox/doctrin/urls'
+# flow-up
+alias flow-up='~/doc/flow-up/up.sh'
+# note: json2table is in /usr/local/bin
