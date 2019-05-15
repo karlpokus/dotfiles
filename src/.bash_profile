@@ -46,3 +46,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # autocompletes
 source ~/dotfiles/deps/bash_completion.d/ssh  #/usr/local/etc/bash_completion.d/ssh
 
+# ls colors
+export LSCOLORS=exfxcxdxbxegedabagacad
