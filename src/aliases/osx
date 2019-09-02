@@ -15,7 +15,7 @@ alias gopkg='~/golang/src/github.com/karlpokus/gopkg/gopkg'
 # http server status
 alias status='~/dev/http-status-code/request.sh'
 # url-stash
-alias urst='~/dev/url-stash/urst.sh ~/Dropbox/doctrin/urls'
+alias urst='~/dev/url-stash/urst.sh ~/Dropbox/jobb/doctrin/urls'
 # flow-up
 alias flow-up='~/doc/flow-up/up.sh'
 # note: json2table is in /usr/local/bin
