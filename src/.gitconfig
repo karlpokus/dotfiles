@@ -22,4 +22,9 @@
 	process = git-lfs filter-process
 	required = true
 [http]
-	postBuffer = 524288000
+    postBuffer = 524288000
+[log]
+    date = short
+[format]
+    pretty = format:%C(yellow)%h %Cblue%>(10)%ad %Cgreen%<(7)%aN %C(red)%d %Creset%s
+
