@@ -50,3 +50,6 @@ source ~/dotfiles/deps/bash_completion.d/ssh  #/usr/local/etc/bash_completion.d/
 
 # ls colors
 export LSCOLORS=exfxcxdxbxegedabagacad
+
+# set locale to something resembling eng
+export LC_ALL=en_US.UTF-8
