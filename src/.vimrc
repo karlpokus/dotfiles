@@ -20,6 +20,7 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 set path=$PWD/**          " set path to current dir from where you launched vim
 set rtp+=/usr/local/opt/fzf " add fzf to runtimepath
+set backspace=indent,eol,start " make backspace work lite normally
 
 " remove pipes in divider
 set fillchars+=vert:\ 
