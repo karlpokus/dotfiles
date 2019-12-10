@@ -2,7 +2,7 @@
 alias njobs='jobs -p | wc -l'
 alias killjobs='[[ $(njobs) -gt 0 ]] && kill $(jobs -p) || echo "no jobs to kill"'
 # are there node processes running?
-alias nodes='lsof -n -i tcp | grep node'
+alias nodes='lsof -nP -i tcp | grep node'
 # list ip
 alias ip-wan='curl -s https://ip.mrfriday.com/'
 alias myip='echo -e public"\t"$(ip-wan)"\n"private"\t"$(ip-lan)'
