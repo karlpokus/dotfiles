@@ -6,3 +6,4 @@ alias nodes='lsof -nP -i tcp | grep node'
 # list ip
 alias ip-wan='curl -s https://ip.mrfriday.com/'
 alias myip='echo -e public"\t"$(ip-wan)"\n"private"\t"$(ip-lan)'
+alias zombies='ps aux | grep -w Z'
