@@ -21,3 +21,4 @@ alias flow-up='~/doc/flow-up/up.sh'
 # note: json2table is in /usr/local/bin
 # open go playground in browser
 alias gopl='open https://play.golang.org'
+alias canigo='~/dotfiles/src/scripts/canigo.sh'
