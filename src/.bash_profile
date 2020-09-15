@@ -38,12 +38,12 @@ export EDITOR="$VISUAL"
 # java
 #export JAVA_HOME=`/usr/libexec/java_home`
 
-# go-lang
+# go
 export GOPATH=$HOME/golang
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # rust lang
-export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
 
 # autocompletes
 source ~/dotfiles/deps/bash_completion.d/ssh  #/usr/local/etc/bash_completion.d/ssh
