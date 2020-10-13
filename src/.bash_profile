@@ -56,3 +56,6 @@ export LC_ALL=en_US.UTF-8
 
 # remove deprecation warning on macos catalina
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
