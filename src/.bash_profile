@@ -39,7 +39,7 @@ export EDITOR="$VISUAL"
 #export JAVA_HOME=`/usr/libexec/java_home`
 
 # go
-export GOPATH=$HOME/golang
+export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # rust lang
