@@ -3,8 +3,9 @@
 	smudge = git media smudge %f
 	required = true
 [user]
-	name = Karl Pokus
-	email = karl.pokus@gmail.com
+	name = carl-fredrik
+	email = carl-fredrik.grimberg@northvolt.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMrsutm5sOaFvlYmbmRmP79xPO6fnL15jJQsZ6uo4tvw
 [alias]
 	st = status
 	co = checkout
@@ -22,9 +23,15 @@
 	process = git-lfs filter-process
 	required = true
 [http]
-    postBuffer = 524288000
+    	postBuffer = 524288000
 [log]
-    date = short
+    	date = short
 [format]
-    pretty = format:%C(yellow)%h %Cblue%>(10)%ad %Cgreen%<(7)%aN %C(red)%d %Creset%s
-
+    	pretty = format:%C(yellow)%h %Cblue%>(10)%ad %Cgreen%<(7)%aN %C(red)%d %Creset%s
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/opt/1Password/op-ssh-sign"
+	allowedSignersFile = ~/.ssh/allowed_signers
+[commit]
+	gpgsign = true
